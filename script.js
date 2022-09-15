@@ -78,15 +78,18 @@ const gameOver = () => {
   display.innerHTML = "";
   // make it inactive
   display.classList.add("inactive");
+  //wpmCounter(questionText, errorCount, timeTaken);//////////////////
   // show result
   resultModal.innerHTML += `
     <h1>Finished!</h1>
-    <p style="Margin: 0 1rem 0 0;">You took: <span class="bold">${Math.trunc(timeTaken)}</span> seconds</p>
-    <p style="Margin: 0 0 1rem 0;">You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p style="Margin: 0 1rem 0.5rem 0;">You took: <span class="bold">${Math.trunc(timeTaken)}</span> seconds</p>
+    <p style="Margin: 0 0 0.5rem 0;">You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p style="Margin: 0 0 1rem 0;">You made <span id="wpm-counter" class="bold green"></span> WPM</p>
     <button onclick="closeModal()">Close</button>
   `;
 
   addHistory(questionText, Math.trunc(timeTaken), errorCount);
+  wpmCounter(questionText, timeTaken);
 
   // restart everything
   startTime = null;
@@ -94,6 +97,13 @@ const gameOver = () => {
   userText = "";
   display.classList.add("inactive");
 };
+
+// WPM Calculation Function
+const wpmCounter = (questionText, timeTaken) =>{
+  const wpm = (questionText.length / 5) / (Math.trunc(timeTaken) / 60);
+  const modalWpm = document.getElementById('wpm-counter');
+  modalWpm.innerText = parseInt(wpm);
+}
 
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
@@ -138,3 +148,4 @@ setInterval(() => {
 
   document.getElementById("show-time").innerHTML = `${startTime ? Math.trunc(timeSpent) : 0} seconds`;
 }, 1000);
+
