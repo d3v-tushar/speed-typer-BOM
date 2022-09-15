@@ -1,13 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="blog.css">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Speed Monster</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+            rel="stylesheet" />
+        <!-- Bootstrap CDN -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <!-- FontAwesome CDN -->
+        <script src="https://kit.fontawesome.com/85754d5be1.js" crossorigin="anonymous"></script>
+
+    </head>
 </head>
-<body>
-    
+
+<body class="bg-light">
+    <header>
+        <h1 class="title align-items-center"><img src="./logo.png" /></h1>
+        <h2 style="text-align: center; color: white;">B L O G</h2>
+        <section class="container mx-auto ">
+
+            <!-- Navbar -->
+
+            <!-- Navbar -->
+
+
+            <hr class="border border-primary border-1 opacity-75">
+            <div id="categories-container" class="d-flex justify-content-between mx-0 nav">
+            </div>
+        </section>
+    </header>
+
+    <!-- Blog  -->
+    <div class="container mx-auto align-items-center justify-content-center">
+        <div class="card text-bg-success mb-3">
+            <div class="card-header text-white bg-dark fs-3">Question 1</div>
+            <div class="card-body">
+                <h5 class="card-title text-dark fs-2">Local storage Vs Session Storage</h5>
+                <p class="card-text fs-4">
+                    Local Storage : This read-only interface property provides access to the Document’s
+                    local storage object, the stored data is stored across browser sessions. Similar to sessionStorage,
+                    except that localStorage data gets cleared when the page session ends – that is when the page is
+                    closed. It is cleared when the last “private” tab of a browser is closed.<br>
+                    <br>
+                    Session Storage : Session Storage objects can be accessed using the sessionStorage read-only
+                    property. The difference between sessionStorage and localStorage is that localStorage data does not
+                    expire, whereas sessionStorage data is cleared when the page session ends.A page’s protocol
+                    determines what data is stored in sessionStorage.
+
+
+                </p>
+            </div>
+        </div>
+        <div class="card text-bg-success mb-3">
+            <div class="card-header text-white bg-dark fs-3">Question 2</div>
+            <div class="card-body">
+                <h5 class="card-title text-dark fs-2">Global Scope Vs Block Scope</h5>
+                <p class="card-text fs-4">
+                    Global Scope : Variables declared Globally (outside any function) have Global Scope.
+
+                    Global variables can be accessed from anywhere in a JavaScript program.
+
+                    Variables declared with var, let and const are quite similar when declared outside a block.<br>
+                    <br>
+                    Block Scope : Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+                    ES6 introduced two important new JavaScript keywords: let and const.
+
+                    These two keywords provide Block Scope in JavaScript.
+
+
+                </p>
+            </div>
+        </div>
+        <div class="card text-bg-success mb-3">
+            <div class="card-header text-white bg-dark fs-3">Question 3</div>
+            <div class="card-body">
+                <h5 class="card-title text-dark fs-2">How does Js Event Loop work?</h5>
+                <p class="card-text fs-4">
+                    JavaScript has a runtime model based on an event loop, which is responsible for executing the code,
+                    collecting and processing events, and executing queued sub-tasks. This model is quite different from
+                    models in other languages like C and Java.
+                    <br>
+                    <img src="./FireShot Capture 012 - The event loop - JavaScript - MDN - developer.mozilla.org.png"
+                        alt=""><br>
+                    Order of operations:<br>
+
+                    1.When calling bar, a first frame is created containing references to bar's arguments and local
+                    variables.<br>
+                    2.When bar calls foo, a second frame is created and pushed on top of the first one, containing
+                    references to foo's arguments and local variables.<br>
+                    3.When foo returns, the top frame element is popped out of the stack (leaving only bar's call
+                    frame).<br>
+                    4.When bar returns, the stack is empty.<br>
+
+
+
+                </p>
+            </div>
+        </div>
+        <div class="card text-bg-success mb-3">
+            <div class="card-header text-white bg-dark fs-3">Question 4</div>
+            <div class="card-body">
+                <h5 class="card-title text-dark fs-2">How many ways Can we get Undefined?</h5>
+                <p class="card-text fs-4">
+                    undefined is a property of the global object. That is, it is a variable in global scope. The initial
+                    value of undefined is the primitive value undefined.<br>
+
+                    In all non-legacy browsers, undefined is a non-configurable, non-writable property. (Even when this
+                    is not the case, avoid overriding it.)<br>
+
+                    A variable that has not been assigned a value is of type undefined. A method or statement also
+                    returns undefined if the variable that is being evaluated does not have an assigned value. A
+                    function returns undefined if a value was not returned. <br>
+
+
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer Section  -->
+    <footer class="text-center text-dark mx-auto">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn text-white btn-floating m-1 rounded-circle" style="background-color: #3b5998;" href="#!"
+                    role="button"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn text-white btn-floating m-1 rounded-circle" style="background-color: #55acee;" href="#!"
+                    role="button"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn text-white btn-floating m-1 rounded-circle" style="background-color: #dd4b39;" href="#!"
+                    role="button"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn text-white btn-floating m-1 rounded-circle" style="background-color: #ac2bac;" href="#!"
+                    role="button"><i class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn text-white btn-floating m-1 rounded-circle" style="background-color: #0082ca;" href="#!"
+                    role="button"><i class="fab fa-linkedin-in"></i></a>
+                <!-- Github -->
+                <a class="btn text-white btn-floating m-1 rounded-circle" style="background-color: #333333;" href="#!"
+                    role="button"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2025 Copyright:
+            <a class="text-white" href="">AshikSimanto</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
