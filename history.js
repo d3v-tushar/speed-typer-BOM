@@ -1,6 +1,6 @@
 const histories = document.getElementById("histories");
 
-function addHistory(questionText, timeTaken, errorCount, wpmCounter) {
+function addHistory(questionText, timeTaken, errorCount) {
   const newRow = document.createElement("div");
   newRow.classList.add("card");
 
@@ -9,8 +9,6 @@ function addHistory(questionText, timeTaken, errorCount, wpmCounter) {
   <div>
   <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
   <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
-  <p>You made <span id="history-wpm" class="bold red"></span> WPM</p>
-
   </div>
   `;
 
